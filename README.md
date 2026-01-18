@@ -15,14 +15,11 @@
 
 ---
 
-## 🌐 Portfolio • Resume • Socials
+## 🌐 Portfolio & Links
 
 <p align="center">
   <a href="https://kaushal-karna.github.io/portfolio-2026/" target="_blank">
     <img src="https://img.shields.io/badge/🌍 Portfolio-Visit-blue?style=for-the-badge">
-  </a>
-  <a href="assets/Kaushal_Karn_Resume.pdf" target="_blank">
-    <img src="https://img.shields.io/badge/Resume-PDF-important?style=for-the-badge">
   </a>
   <a href="https://github.com/kaushal-karna" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-kaushal--karna-black?style=for-the-badge&logo=github">
@@ -37,11 +34,17 @@
 
 ---
 
+## 📄 Resume
+
+👉 **[View My Resume](assets/kaushal_karn_cv.pdf)**
+
+---
+
 ## 🚀 About Me
 
-- 🎓 Computer Science student from **Nepal**
-- 💡 Curious about **AI, Cybersecurity, Automation & Embedded Systems**
-- 🛠 Passionate about building **real-world, practical projects**
+- 🎓 Computer Science student from Nepal  
+- 💡 Curious about **AI, cybersecurity, automation & embedded systems**
+- 🛠 Love turning ideas into **real-world projects**
 - 🌱 Currently improving **JavaScript, Django & system-level concepts**
 - 🎯 Goal: Become a **full-stack developer & ethical hacker**
 
@@ -49,24 +52,28 @@
 
 ## 🧠 Skills & Technologies
 
-### 💻 Programming Languages
-- **C, C++**
-- **Python**
-- **JavaScript**
+### 💻 Programming
+
+- C, C++
+- Python
+- JavaScript
 
 ### 🌐 Web Development
+
 - HTML5, CSS3 (Flexbox, Grid)
 - JavaScript (DOM, APIs)
 - Django (Basics)
-- GitHub Pages & Netlify
+- Netlify & GitHub Pages
 
-### 🤖 AI / Embedded Systems
+### 🤖 AI / Embedded
+
 - OpenCV
 - TensorFlow (Basics)
 - Arduino
 - IoT & Sensors
 
-### 🧰 Tools & Environment
+### 🧰 Tools
+
 - Git & GitHub
 - Linux
 - VS Code
@@ -76,22 +83,44 @@
 ## 🧩 Featured Projects
 
 ### 🔹 Smart Attendance System
+
 Face recognition based attendance system  
 **Tech:** OpenCV, TensorFlow, Python  
 
 ### 🔹 Embedded Sensor Node
-Low-power IoT sensor node for data monitoring  
+
+Low-power IoT sensor node  
 **Tech:** Arduino, Sensors, MQTT  
 
 ### 🔹 Personal Portfolio Website
-Responsive portfolio website deployed online  
+
+Responsive portfolio deployed online  
 **Tech:** HTML, CSS, JavaScript, Netlify  
 
 👉 Explore more projects on my **GitHub repositories**
 
 ---
 
-## 📊 GitHub Statistics
+## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats
+  <img src="https://github-readme-stats.vercel.app/api?username=kaushal-karna&show_icons=true&theme=transparent" width="48%">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaushal-karna&layout=compact&theme=transparent" width="48%">
+</p>
+
+---
+
+## 🤝 Let’s Connect
+
+- 💼 Open to **internships & collaborations**
+- 📩 Reach me via **email or GitHub**
+
+---
+
+<p align="center">
+  ⭐ Star my repositories if you like my work
+</p>
+
+<p align="center">
+  <sub>Made with ❤️ by Kaushal Karn | 2026</sub>
+</p>
