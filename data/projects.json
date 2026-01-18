@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Smart Attendance System",
+    "description": "Face recognition based attendance automation using OpenCV and TensorFlow.",
+    "url": "https://github.com/Kaushal-Ka/smart-attendance",
+    "tech": ["Python","OpenCV","TensorFlow"],
+    "thumb": "data/project-1.svg"
+  },
+  {
+    "title": "Embedded Sensor Node",
+    "description": "Low-power IoT sensor node with data logging and MQTT connectivity.",
+    "url": "https://github.com/Kaushal-Ka/embedded-sensor-node",
+    "tech": ["C","Arduino","MQTT"],
+    "thumb": "data/project-2.svg"
+  },
+  {
+    "title": "Django Portfolio Site",
+    "description": "Personal site and blog built with Django and deployed to Netlify.",
+    "url": "https://kaushalkarna.netlify.app/",
+    "tech": ["Python","Django","Netlify"],
+    "thumb": "data/project-3.svg"
+  }
+]

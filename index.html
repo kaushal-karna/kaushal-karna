@@ -2,173 +2,272 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kaushal Karn | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaushal Karn — Portfolio</title>
   <style>
+    :root {
+      --bg: #0d1117;
+      --muted: #8b949e;
+      --text: #c9d1d9;
+      --accent: #58a6ff;
+      --card: rgba(1,4,9,0.6);
+      --card-elev: rgba(2,6,23,0.6);
+      --glass: rgba(255,255,255,0.02);
+      --border: rgba(240,246,252,0.1);
+    }
+
+    /* Light theme overrides */
+    :root[data-theme='light'] {
+      --bg: #ffffff;
+      --muted: #656d76;
+      --text: #24292f;
+      --accent: #0969da;
+      --card: rgba(255,255,255,0.9);
+      --card-elev: rgba(2,6,23,0.06);
+      --glass: rgba(10,20,30,0.02);
+      --border: rgba(208,215,222,0.5);
+    }
+
+    * { box-sizing: border-box; }
+    /* prevent horizontal scrolling from overflow */
+    html, body { overflow-x: hidden; }
+    /* make images responsive and avoid overflow */
+    img { max-width: 100%; height: auto; display: block; }
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
       margin: 0;
-      padding: 0 10px;
+      font-family: Inter, 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg,var(--bg),color-mix(in srgb, var(--bg) 80%, transparent));
+      color: var(--text);
+      -webkit-font-smoothing:antialiased;
+      transition: background-color 240ms ease, color 240ms ease;
     }
 
-    h1,
-    h2,
-    h3 {
-      text-align: center;
+    .wrap { max-width:1100px; margin:30px auto; padding:24px; }
+    header { display:flex; gap:20px; align-items:center; justify-content:flex-start; flex-wrap:wrap; }
+    .avatar { width:120px; height:120px; border-radius:16px; overflow:hidden; flex:0 0 120px; border:2px solid rgba(255,255,255,0.04); }
+    .avatar img { width:100%; height:100%; object-fit:cover; display:block; }
+    h1 { margin:0; font-size:1.6rem; }
+    p.lead { margin:6px 0 10px; color:var(--muted); }
+
+    .badges { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; align-items:center; }
+
+    /* Theme switch (inline) */
+    .theme-toggle { background:transparent; border:0; padding:0; display:inline-flex; align-items:center; gap:8px; }
+    .switch { width:56px; height:32px; border-radius:999px; padding:4px; display:inline-flex; align-items:center; background:color-mix(in srgb, var(--card) 30%, transparent); cursor:pointer; transition: background-color 240ms ease, transform 180ms ease; border:1px solid color-mix(in srgb, var(--card) 40%, transparent); }
+    .switch .knob { width:24px; height:24px; background:var(--bg); border-radius:50%; box-shadow:0 4px 12px rgba(2,6,23,0.35); transform: translateX(0); transition: transform 320ms cubic-bezier(.2,.9,.3,1), background 240ms ease; display:inline-block; }
+    .switch.on { background: color-mix(in srgb, var(--accent) 18%, transparent); }
+    .switch.on .knob { transform: translateX(24px); background: white; }
+    .theme-icon { display:inline-block; width:18px; height:18px; font-size:14px; transition: transform 320ms ease; }
+
+    main { display:grid; grid-template-columns: 1fr 340px; gap:28px; margin-top:28px; align-items:start; }
+
+    .card { background: var(--card); padding:18px; border-radius:12px; border: 1px solid var(--border); box-shadow: 0 6px 24px var(--card-elev); transition: transform 160ms ease, box-shadow 200ms ease, background-color 240ms ease; }
+
+    .skills { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+    .skill { background:color-mix(in srgb, var(--card) 26%, transparent); color:var(--muted); padding:6px 10px; border-radius:999px; font-size:0.85rem; }
+
+    .tech { display:inline-block; background:color-mix(in srgb, var(--accent) 12%, transparent); color:var(--text); padding:4px 8px; border-radius:8px; font-size:0.78rem; margin-right:6px; }
+
+    .projects { display:grid; gap:12px; }
+    .project { display:flex; gap:12px; padding:12px; border-radius:10px; background:var(--card); text-decoration:none; color:inherit; align-items:center; transition: transform 140ms ease, box-shadow 180ms ease; }
+    .project:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(2,6,23,0.25); }
+    .project img { width:96px; height:64px; object-fit:cover; border-radius:8px; flex:0 0 96px; }
+    .project h3 { margin:0 0 6px 0; font-size:1rem; }
+    .project p { margin:0; color:var(--muted); font-size:0.92rem; }
+
+    aside .card img { max-width:100%; border-radius:8px; display:block; }
+
+    footer { text-align:center; margin:28px 0 6px; color:var(--muted); font-size:0.95rem; }
+
+    /* Responsive rules */
+    @media (max-width:1100px) {
+      .wrap{padding:18px}
     }
 
-    p,
-    ul {
-      max-width: 900px;
-      margin: 10px auto;
+    @media (max-width:880px) {
+      main { grid-template-columns: 1fr; }
+      header { align-items:flex-start; }
+      .avatar{width:96px;height:96px;flex:0 0 96px}
+      .badges { gap:6px; }
+      .project { flex-direction:column; align-items:stretch; }
+      .project img { width:100%; height:160px; flex:unset; }
+      h1 { font-size:1.25rem; }
+      p.lead { font-size:0.95rem }
+      aside .card img { max-width:100%; height:auto }
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      margin: 5px 0;
-    }
-
-    img {
-      display: block;
-      margin: 15px auto;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px solid #30363d;
-      margin: 40px 0;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    .badges img {
-      margin: 5px;
+    @media (max-width:480px){
+      .wrap{margin:12px}
+      .card{padding:14px}
+      header{gap:12px}
     }
   </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <header>
+      <div class="avatar card" id="avatar">
+        <!-- avatar image injected -->
+      </div>
+      <div>
+        <h1 id="name">Loading…</h1>
+        <p class="lead" id="bio">Using a lightweight data file for content.</p>
+        <div class="badges" id="links"></div>
+        <button id="theme-toggle" class="theme-toggle" aria-pressed="false" aria-label="Toggle theme">
+          <span id="theme-icon" class="theme-icon">🌙</span>
+          <span class="switch" id="theme-switch" role="switch" aria-checked="false">
+            <span class="knob" aria-hidden="true"></span>
+          </span>
+        </button>
+      </div>
+    </header>
 
-  <img src="data/bio.svg" alt="My SVG" style="display:block; margin: 20px auto; max-width:200px;" />
+    <main>
+      <section>
+        <div class="card">
+          <h2>About</h2>
+          <p id="about">Fetching profile...</p>
+          <div class="skills" id="skills"></div>
+        </div>
 
-  <h1>
-    <img
-      src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=6000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hi,+I'm+Kaushal+Karn+👋"
-      alt="Typing effect" />
-  </h1>
+        <div style="height:18px"></div>
 
-  <p align="center">
-    <a href="https://drive.google.com/file/d/1VMKW57XKWFm9atNLOwpDxJrHvu8sSx0e/view?usp=sharing">
-      <img
-        src="https://img.shields.io/badge/View%20Resume-blueviolet?style=for-the-badge&logo=read-the-docs&logoColor=white"
-        alt="View Resume" />
-    </a>
-  </p>
+        <div class="card">
+          <h2>Projects</h2>
+          <div class="projects" id="projects">Loading projects…</div>
+        </div>
+      </section>
 
-  <p align="center">
-    <img
-      src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=4000&color=00CED1&center=true&vCenter=true&width=600&lines=AI+|+Cybersecurity+|+Python+%26+C++ +|+Tech"
-      alt="Tech Stack Animated" />
-  </p>
+      <aside>
+        <div class="card">
+          <h3>GitHub</h3>
+          <p style="color:var(--muted); margin-bottom:12px">Live stats and top languages</p>
+          <img id="gh-stats" src="" alt="GitHub stats" style="max-width:100%;" />
+          <div style="height:8px"></div>
+          <img id="gh-toplangs" src="" alt="Top languages" style="max-width:100%;" />
+        </div>
 
-  <hr>
+        <div style="height:12px"></div>
 
-  <h2>
-    <img
-      src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=5000&color=8A2BE2&center=true&vCenter=true&width=700&lines=👨‍💻+About+Me"
-      alt="Typing effect" />
-  </h2>
+        <div class="card">
+          <h3>Contact</h3>
+          <p style="color:var(--muted);">Email, website and social links</p>
+          <div id="contact-links" style="margin-top:8px"></div>
+        </div>
+      </aside>
+    </main>
 
-  <ul>
-  <li>🔍 Highly curious about <b>AI, automation, Python & C/C++, embedded systems, and cybersecurity</b></li>
-  <li>🧠 Focused on <b>learning, experimenting, and building smart, practical solutions</b></li>
-  <li>💡 Skilled in leveraging <b>AI tools, programming, electronics, and Django</b> for innovative projects</li>
-  <li>⚡ Constantly improving <b>problem-solving, coding, analytical, and full-stack development skills</b></li>
-</ul>
+    <footer>Made with ❤️ by Kaushal Karna. All rights reserved 2026.</footer>
+  </div>
 
-  <hr>
+  <script>
+    async function loadData(){
+      try{
+        const [pRes, projRes] = await Promise.all([
+          fetch('data/profile.json'),
+          fetch('data/projects.json')
+        ]);
+        const profile = await pRes.json();
+        const projects = await projRes.json();
 
-  <h2>
-    <img
-      src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&color=00CED1&center=true&vCenter=true&width=700&lines=🛠️+Skills+%26+Expertise"
-      alt="Skills Typing" />
-  </h2>
+        document.getElementById('name').textContent = profile.name;
+        document.getElementById('bio').textContent = profile.bio;
+        document.getElementById('about').textContent = profile.bio + ' Based in ' + (profile.location||'') + '.';
 
-  <p align="center" class="badges">
-    <img
-      src="https://img.shields.io/badge/Languages-C%2C%20C++%2C%20Python-blue?style=for-the-badge&logo=python&logoColor=white"
-      alt="Languages" />
-    <img
-      src="https://img.shields.io/badge/Frameworks-TensorFlow%2C%20Keras%2C%20OpenCV%2C%20Mediapipe-green?style=for-the-badge&logo=tensorflow&logoColor=white"
-      alt="Frameworks" />
-    <img
-      src="https://img.shields.io/badge/Tools-Git%2C%20GitHub%2C%20VS%20Code%2C%20Linux%2C%20Arduino-orange?style=for-the-badge&logo=github&logoColor=white"
-      alt="Tools" />
-    <img
-      src="https://img.shields.io/badge/Interests-AI%20Assistants%2C%20Automation%2C%20IoT%2C%20Cybersecurity%2C%20JARVIS-blueviolet?style=for-the-badge"
-      alt="Interests" />
-  </p>
+        // avatar with fallback to local asset
+        const avatarEl = document.getElementById('avatar');
+        const img = document.createElement('img');
+        img.alt = profile.name + ' avatar';
+        img.src = `https://github.com/${profile.username}.png`;
+        img.onerror = () => { img.onerror = null; img.src = 'data/avatar.svg'; };
+        avatarEl.appendChild(img);
 
-  <hr>
+        // skills
+        const skillsEl = document.getElementById('skills');
+        (profile.skills||[]).forEach(s=>{
+          const span = document.createElement('span');
+          span.className='skill'; span.textContent=s; skillsEl.appendChild(span);
+        });
 
-  <!-- <h2>
-    <img
-      src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&color=FF6F61&center=true&vCenter=true&width=700&lines=📊+GitHub+%26+Tech+Stats"
-      alt="Stats Typing" />
-  </h2>
+        // links / badges
+        const links = document.getElementById('links');
+        const resume = document.createElement('a');
+        resume.href = profile.resume; resume.target='_blank';
+        resume.innerHTML = '<img src="https://img.shields.io/badge/Resume-View-blueviolet?style=for-the-badge" alt="Resume">';
+        links.appendChild(resume);
 
-  <p align="center">
-    <img
-      src="[![Your GitHub stats](https://github-readme-stats.vercel.app/api?username=kaushal-ka)](https://github.com/kaushal-ka/github-readme-stats)"
-      alt="Top Languages" />
-  </p> -->
+        const website = document.createElement('a'); website.href=profile.website; website.target='_blank'; website.innerHTML='<img src="https://img.shields.io/badge/Website-Visit-blue?style=for-the-badge" alt="Website">'; links.appendChild(website);
 
-  <hr>
+        // contact links
+        const contact = document.getElementById('contact-links');
+        contact.innerHTML = `
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <a href="mailto:${profile.email}">${profile.email}</a>
+            <a href="${profile.website}" target="_blank">${profile.website}</a>
+            <a href="${profile.social.github}" target="_blank" style="display:flex;align-items:center;gap:8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> GitHub</a>
+            <a href="${profile.social.twitter}" target="_blank" style="display:flex;align-items:center;gap:8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg> X / Twitter</a>
+            <a href="${profile.social.youtube}" target="_blank" style="display:flex;align-items:center;gap:8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg> YouTube</a>
+          </div>`;
 
-  <h2>
-    <img
-      src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&color=00CED1&center=true&vCenter=true&width=700&lines=📫+Connect+With+Me"
-      alt="Connect Typing" />
-  </h2>
+        // projects
+        const projectsEl = document.getElementById('projects'); projectsEl.innerHTML='';
+        (projects||[]).forEach(p=>{
+          const a = document.createElement('a'); a.className='project'; a.href = p.url; a.target='_blank';
+          const thumb = p.thumb || 'data/project-1.svg';
+          // tech tags
+          const techHtml = (p.tech||[]).map(t=>`<span class="tech">${t}</span>`).join(' ');
+          a.innerHTML = `
+            <img src="${thumb}" onerror="this.onerror=null;this.src='data/project-1.svg'" alt="${p.title} thumbnail" />
+            <div style="flex:1; min-width:0">
+              <h3 style="margin-bottom:6px">${p.title}</h3>
+              <p style="margin:0 0 8px;color:var(--muted);font-size:0.95rem">${p.description}</p>
+              <div>${techHtml}</div>
+            </div>`;
+          projectsEl.appendChild(a);
+        });
 
-  <p align="center" class="badges">
-  <!-- Website -->
- <a href="https://kaushalkarna.netlify.app/" target="_blank">
-  <img src="https://img.shields.io/badge/Website-kaushal--karna-blue?style=for-the-badge&logo=internet-explorer" alt="Website" />
-</a>
+        // github stats
+        const ghStats = document.getElementById('gh-stats');
+        ghStats.src = `https://github-readme-stats.vercel.app/api?username=${profile.username}&show_icons=true&theme=transparent`;
+        const ghTop = document.getElementById('gh-toplangs');
+        ghTop.src = `https://github-readme-stats.vercel.app/api/top-langs/?username=${profile.username}&layout=compact&theme=transparent&hide_border=true`;
 
+        // theme init: prefer saved, otherwise system preference
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const themeSwitch = document.getElementById('theme-switch');
+        function applyTheme(t){
+          document.documentElement.setAttribute('data-theme', t);
+          const isDark = t === 'dark';
+          themeToggle.setAttribute('aria-pressed', String(!isDark));
+          themeSwitch.setAttribute('aria-checked', String(!isDark));
+          themeIcon.textContent = isDark ? '🌙' : '☀️';
+          if(!isDark) themeSwitch.classList.add('on'); else themeSwitch.classList.remove('on');
+        }
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const startTheme = saved || (prefersDark ? 'dark' : 'light');
+        applyTheme(startTheme);
 
-  <!-- YouTube -->
-  <a href="https://www.youtube.com/@kaushalkarnakayansh839" target="_blank">
-    <img src="https://img.shields.io/badge/YouTube-Kaushal-red?style=for-the-badge&logo=youtube" alt="YouTube" />
-  </a>
+        // clicking toggle toggles theme and animates icon
+        themeToggle.addEventListener('click', ()=>{
+          const current = document.documentElement.getAttribute('data-theme') || 'dark';
+          const next = current === 'dark' ? 'light' : 'dark';
+          applyTheme(next);
+          localStorage.setItem('theme', next);
+          themeIcon.style.transform = 'rotate(360deg) scale(1.08)';
+          setTimeout(()=> themeIcon.style.transform = '', 520);
+        });
 
-  <!-- Twitter/X -->
-  <a href="https://x.com/KaushalKa" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-%40KaushalKa-blue?style=for-the-badge&logo=twitter" alt="Twitter" />
-  </a>
-
-  <!-- Email -->
-  <a href="mailto:kkarn02977@gmail.com">
-    <img src="https://img.shields.io/badge/Email-kkarn02977%40gmail.com-red?style=for-the-badge&logo=gmail" alt="Email" />
-  </a>
-
-  <!-- GitHub -->
-  <a href="https://github.com/Kaushal-Ka" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-%40Kaushal--Ka-black?style=for-the-badge&logo=github" alt="GitHub" />
-  </a>
-</p>
-
- 
+      }catch(err){
+        document.getElementById('about').textContent = 'Could not load local data. Check data/profile.json and data/projects.json.';
+        console.error(err);
+      }
+    }
+    loadData();
+  </script>
 </body>
 
 </html>

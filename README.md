@@ -1,98 +1,119 @@
-![My SVG](data/bio.svg)
-
-<h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=40&duration=6000&color=8A2BE2&center=true&vCenter=true&width=700&lines=Hi,+I'm+Kaushal+Karn+👋" alt="Typing effect"/>
-</h1>
+# 👋 Hi, I'm Kaushal Karn
 
 <p align="center">
-    <a href="https://drive.google.com/file/d/1VMKW57XKWFm9atNLOwpDxJrHvu8sSx0e/view?usp=sharing">
-      <img
-        src="https://img.shields.io/badge/View%20Resume-blueviolet?style=for-the-badge&logo=read-the-docs&logoColor=white"
-        alt="View Resume" />
-    </a>
-  </p>
-
-
-<p align="center">
-    <img
-      src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=25&duration=4000&color=00CED1&center=true&vCenter=true&width=600&lines=AI+|+Cybersecurity+|+Python+%26+C++ +|+Tech"
-      alt="Tech Stack Animated" />
-  </p>
-
-
----
-
-<h2 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=35&duration=5000&color=8A2BE2&center=true&vCenter=true&width=700&lines=👨‍💻+About+Me" alt="Typing effect"/>
-</h2>
-
-<ul>
-  <li>🔍 Highly curious about <b>AI, automation, Python & C/C++, embedded systems, and cybersecurity</b></li>
-  <li>🧠 Focused on <b>learning, experimenting, and building smart, practical solutions</b></li>
-  <li>💡 Skilled in leveraging <b>AI tools, programming, electronics, and Django</b> for innovative projects</li>
-  <li>⚡ Constantly improving <b>problem-solving, coding, analytical, and full-stack development skills</b></li>
-</ul>
-
-
----
-
-<h2 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&color=00CED1&center=true&vCenter=true&width=700&lines=🛠️+Skills+%26+Expertise" alt="Skills Typing"/>
-</h2>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Languages-C%2C%20C++%2C%20Python-blue?style=for-the-badge&logo=python&logoColor=white" alt="Languages"/>
-  <img src="https://img.shields.io/badge/Frameworks-TensorFlow%2C%20Keras%2C%20OpenCV%2C%20Mediapipe-green?style=for-the-badge&logo=tensorflow&logoColor=white" alt="Frameworks"/>
-  <img src="https://img.shields.io/badge/Tools-Git%2C%20GitHub%2C%20VS%20Code%2C%20Linux%2C%20Arduino-orange?style=for-the-badge&logo=github&logoColor=white" alt="Tools"/>
-  <img src="https://img.shields.io/badge/Interests-AI%20Assistants%2C%20Automation%2C%20IoT%2C%20Cybersecurity%2C%20JARVIS-blueviolet?style=for-the-badge" alt="Interests"/>
+  <img src="data/bio.svg" alt="Kaushal Karn Banner" width="100%" />
 </p>
 
-<!-- ---
+<p align="center">
+  <b>Frontend Developer • Cybersecurity Learner • Embedded Systems Enthusiast</b>
+</p>
 
-<h2 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&color=FF6F61&center=true&vCenter=true&width=700&lines=📊+GitHub+%26+Tech+Stats" alt="Stats Typing"/>
-</h2>
-
-<div align="center">
-
-### **Most Used Languages**
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SarshijKarn&layout=compact&theme=tokyonight&hide_border=true"/>
+<p align="center">
+  I build clean, responsive web interfaces and practical tech projects using <br>
+  <b>HTML, CSS, JavaScript, Python, C/C++</b>.
+</p>
 
 ---
 
-### **GitHub Trophies**
-<img src="https://github-profile-trophy.vercel.app/?username=SarshijKarn&theme=tokyonight&no-frame=true&margin-w=8"/>
+## 🌐 Portfolio & Links
 
---- -->
-
-<h2 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=30&duration=4000&color=00CED1&center=true&vCenter=true&width=700&lines=📫+Connect+With+Me" alt="Connect Typing"/>
-</h2>
-
-<p align="center" class="badges">
-  <!-- Website -->
- <a href="https://kaushalkarna.netlify.app/" target="_blank">
-  <img src="https://img.shields.io/badge/Website-kaushal--karna-blue?style=for-the-badge&logo=internet-explorer" alt="Website" />
-</a>
-
-
-  <!-- YouTube -->
+<p align="center">
+  <a href="https://kaushalkarna.netlify.app/" target="_blank">
+    <img src="https://img.shields.io/badge/🌍 Portfolio-Visit-blue?style=for-the-badge">
+  </a>
+  <a href="https://github.com/kaushal-karna" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-kaushal--karna-black?style=for-the-badge&logo=github">
+  </a>
   <a href="https://www.youtube.com/@kaushalkarnakayansh839" target="_blank">
-    <img src="https://img.shields.io/badge/YouTube-Kaushal-red?style=for-the-badge&logo=youtube" alt="YouTube" />
+    <img src="https://img.shields.io/badge/YouTube-Subscribe-red?style=for-the-badge&logo=youtube">
   </a>
-
-  <!-- Twitter/X -->
-  <a href="https://x.com/KaushalKa" target="_blank">
-    <img src="https://img.shields.io/badge/Twitter-%40KaushalKa-blue?style=for-the-badge&logo=twitter" alt="Twitter" />
-  </a>
-
-  <!-- Email -->
   <a href="mailto:kkarn02977@gmail.com">
-    <img src="https://img.shields.io/badge/Email-kkarn02977%40gmail.com-red?style=for-the-badge&logo=gmail" alt="Email" />
+    <img src="https://img.shields.io/badge/Email-Contact-green?style=for-the-badge">
   </a>
+</p>
 
-  <!-- GitHub -->
-  <a href="https://github.com/Kaushal-Ka" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-%40Kaushal--Ka-black?style=for-the-badge&logo=github" alt="GitHub" />
-  </a>
+---
+
+## 📄 Resume
+
+👉 **[View My Resume](https://drive.google.com/file/d/1VMKW57XKWFm9atNLOwpDxJrHvu8sSx0e/view?usp=sharing)**
+
+---
+
+## 🚀 About Me
+
+- 🎓 Computer Science student from Nepal  
+- 💡 Curious about **AI, cybersecurity, automation & embedded systems**
+- 🛠 Love turning ideas into **real-world projects**
+- 🌱 Currently improving **JavaScript, Django & system-level concepts**
+- 🎯 Goal: Become a **full-stack developer & ethical hacker**
+
+---
+
+## 🧠 Skills & Technologies
+
+### 💻 Programming
+- C, C++
+- Python
+- JavaScript
+
+### 🌐 Web Development
+- HTML5, CSS3 (Flexbox, Grid)
+- JavaScript (DOM, APIs)
+- Django (Basics)
+- Netlify & GitHub Pages
+
+### 🤖 AI / Embedded
+- OpenCV
+- TensorFlow (Basics)
+- Arduino
+- IoT & Sensors
+
+### 🧰 Tools
+- Git & GitHub
+- Linux
+- VS Code
+
+---
+
+## 🧩 Featured Projects
+
+### 🔹 Smart Attendance System
+Face recognition based attendance system  
+**Tech:** OpenCV, TensorFlow, Python  
+
+### 🔹 Embedded Sensor Node
+Low-power IoT sensor node  
+**Tech:** Arduino, Sensors, MQTT  
+
+### 🔹 Personal Portfolio Website
+Responsive portfolio deployed online  
+**Tech:** HTML, CSS, JavaScript, Netlify  
+
+👉 Explore more projects on my **GitHub repositories**
+
+---
+
+## 📊 GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=kaushal-karna&show_icons=true&theme=transparent" width="48%">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kaushal-karna&layout=compact&theme=transparent" width="48%">
+</p>
+
+---
+
+## 🤝 Let’s Connect
+
+- 💼 Open to **internships & collaborations**
+- 📩 Reach me via **email or GitHub**
+
+---
+
+<p align="center">
+  ⭐ Star my repositories if you like my work
+</p>
+
+<p align="center">
+  <sub>Made with ❤️ by Kaushal Karn | 2026</sub>
 </p>
