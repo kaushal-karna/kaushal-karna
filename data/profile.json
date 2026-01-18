@@ -2,14 +2,14 @@
   "name": "Kaushal Karn",
   "username": "kaushal-karna",
   "bio": "Curious about AI, automation, embedded systems, and cybersecurity. I build projects in Python, C/C++, and embedded platforms.",
-  "location": "India",
+  "location": "Nepal",
   "email": "kkarn02977@gmail.com",
-  "website": "https://kaushalkarna.netlify.app/",
-  "resume": "https://drive.google.com/file/d/1VMKW57XKWFm9atNLOwpDxJrHvu8sSx0e/view?usp=sharing",
-  "skills": ["C","C++","Python","Django","TensorFlow","OpenCV","Git"],
+  "website": "https://kaushal-karna.github.io/portfolio-2026/",
+  "resume": "resume.html",
+  "skills": ["C", "C++", "Python", "Django", "TensorFlow", "OpenCV", "Git"],
   "languages": ["HTML", "CSS", "JavaScript", "C", "C++", "Python"],
   "social": {
-    "github": "https://github.com/Kaushal-Ka",
+    "github": "https://github.com/Kaushal-Karna",
     "twitter": "https://x.com/KaushalKa",
     "youtube": "https://www.youtube.com/@kaushalkarnakayansh839"
   }
