@@ -18,7 +18,7 @@
 ## 🌐 Portfolio & Links
 
 <p align="center">
-  <a href="https://kaushalkarna.netlify.app/" target="_blank">
+  <a href="https://kaushal-karna.github.io/portfolio-2026/" target="_blank">
     <img src="https://img.shields.io/badge/🌍 Portfolio-Visit-blue?style=for-the-badge">
   </a>
   <a href="https://github.com/kaushal-karna" target="_blank">
@@ -36,7 +36,7 @@
 
 ## 📄 Resume
 
-👉 **[View My Resume](https://drive.google.com/file/d/1VMKW57XKWFm9atNLOwpDxJrHvu8sSx0e/view?usp=sharing)**
+👉 **[View My Resume](assets/kaushal_karn_cv.pdf)**
 
 ---
 
@@ -53,23 +53,27 @@
 ## 🧠 Skills & Technologies
 
 ### 💻 Programming
+
 - C, C++
 - Python
 - JavaScript
 
 ### 🌐 Web Development
+
 - HTML5, CSS3 (Flexbox, Grid)
 - JavaScript (DOM, APIs)
 - Django (Basics)
 - Netlify & GitHub Pages
 
 ### 🤖 AI / Embedded
+
 - OpenCV
 - TensorFlow (Basics)
 - Arduino
 - IoT & Sensors
 
 ### 🧰 Tools
+
 - Git & GitHub
 - Linux
 - VS Code
@@ -79,14 +83,17 @@
 ## 🧩 Featured Projects
 
 ### 🔹 Smart Attendance System
+
 Face recognition based attendance system  
 **Tech:** OpenCV, TensorFlow, Python  
 
 ### 🔹 Embedded Sensor Node
+
 Low-power IoT sensor node  
 **Tech:** Arduino, Sensors, MQTT  
 
 ### 🔹 Personal Portfolio Website
+
 Responsive portfolio deployed online  
 **Tech:** HTML, CSS, JavaScript, Netlify  
 
