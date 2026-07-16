@@ -85,12 +85,6 @@ Goal:
 
 ---
 
-## 🏆 GitHub Trophies
-
-![GitHub Trophies][github-trophies]
-
----
-
 ## 💻 Most Used Languages
 
 ![Repos per Language][repos-per-language]
@@ -158,7 +152,6 @@ Thanks for visiting my profile ❤️
 [top-langs]: https://kaushal-github-stats.vercel.app/api/top-langs/?username=kaushal-karna&layout=compact&theme=transparent&hide_border=true
 [streak-stats]: https://streak-stats.demolab.com?user=kaushal-karna&theme=transparent&hide_border=true
 [activity-graph]: https://github-readme-activity-graph.vercel.app/graph?username=kaushal-karna&theme=github-compact&hide_border=true
-[github-trophies]: https://github-profile-trophy.vercel.app/?username=kaushal-karna&theme=algolia&no-frame=true&no-bg=true&column=7
 [repos-per-language]: https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=kaushal-karna&theme=github_dark
 [most-commit-language]: https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=kaushal-karna&theme=github_dark
 [profile-details]: https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=kaushal-karna&theme=github_dark
