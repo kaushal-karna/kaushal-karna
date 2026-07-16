@@ -72,11 +72,13 @@ async function loadData(){
     });
 
     // github stats
-    document.getElementById('gh-stats').src =
-      `https://github-readme-stats.vercel.app/api?username=${profile.username}&show_icons=true&theme=transparent`;
+    const STATS_URL = "https://github-readme-stats-two-pi-48.vercel.app";
 
-    document.getElementById('gh-toplangs').src =
-      `https://github-readme-stats.vercel.app/api/top-langs/?username=${profile.username}&layout=compact&theme=transparent`;
+document.getElementById("gh-stats").src =
+`${STATS_URL}/api?username=${profile.username}&show_icons=true&theme=transparent`;
+
+document.getElementById("gh-toplangs").src =
+`${STATS_URL}/api/top-langs/?username=${profile.username}&layout=compact&theme=transparent`;
 
     // theme
     const toggle = document.getElementById('theme-toggle');
