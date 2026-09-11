@@ -6,6 +6,9 @@
     <a href="https://kaushal-karn.onrender.com/">
       <img src="https://img.shields.io/badge/LIVE_PORTFOLIO-00F5FF?style=for-the-badge&logo=safari&logoColor=060913" alt="Portfolio">
     </a>
+     <a href="https://github.com/kaushal-karna/kaushal-karna/blob/main/resume.html">
+    <img src="https://img.shields.io/badge/RESUME-00F5FF?style=for-the-badge&logo=readme&logoColor=060913" alt="Resume">
+  </a>
     <a href="https://github.com/kaushal-karna">
       <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
     </a>
@@ -28,12 +31,12 @@
 ### ⚡ Operational Matrix
 
 ```yaml
-Operator       : Kaushal Karn
-Geographic Hub : Biratnagar, Nepal 🇳🇵
-Specialization : BSc.CSIT Student & Backend Software Engineer
-Core Engine    : Python, Django, Django REST Framework, C#, ASP.NET Core
-Data Layer     : MySQL, SQLite, Oracle DB, PostgreSQL
-Target Focus   : High-throughput API Design, Microservices, Security & Systems
+Operator: Kaushal Karn
+Geographic Hub: Biratnagar, Nepal 🇳🇵
+Specialization: BSc.CSIT Student & Backend Software Engineer
+Core Engine: Python, Django, Django REST Framework, C#, ASP.NET Core
+Data Layer: MySQL, SQLite, Oracle DB, PostgreSQL
+Target Focus: High-throughput API Design, Microservices, Security & Systems
 ```
 
 ### 🧰 Tech Spectrum
