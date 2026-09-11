@@ -3,7 +3,7 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,42&height=220&section=header&text=Kaushal%20Karn&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Django%20%2F%20Python%20Backend%20Architect%20•%20BSc.CSIT&descAlignY=58&descAlign=50" width="100%" alt="Header Banner" />
 
   <p align="center">
-    <a href="https://kaushal-karna.github.io/portfolio-2026/">
+    <a href="index.html">
       <img src="https://img.shields.io/badge/LIVE_PORTFOLIO-00F5FF?style=for-the-badge&logo=safari&logoColor=060913" alt="Portfolio">
     </a>
     <a href="https://github.com/kaushal-karna">
