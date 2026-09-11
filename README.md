@@ -74,7 +74,7 @@ Target Focus   : High-throughput API Design, Microservices, Security & Systems
 
 <div align="center">
 
-  <img src="https://github-readme-streak-stats-2bhnumqom-kaushal-karnas-projects.vercel.app/?user=kaushal-karna&theme=transparent&hide_border=true" width="95%" alt="GitHub Streak" />
+  <img src="https://github-readme-streak-stats-kaushal.vercel.app/?user=kaushal-karna&theme=transparent&hide_border=true" width="95%" alt="GitHub Streak" />
 
 </div>
 
