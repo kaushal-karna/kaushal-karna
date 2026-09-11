@@ -2,64 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Kaushal Karn – Resume</title>
+  <title>Kaushal Karn // Curriculum Vitae</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  
   <style>
+    :root {
+      --bg: #050811;
+      --bar-bg: rgba(13, 20, 38, 0.78);
+      --border: rgba(0, 245, 255, 0.2);
+      --cyan: #00f5ff;
+      --purple: #8b5cf6;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
     body {
-      margin: 0;
-      background: #0d1117;
-      color: #c9d1d9;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
     }
 
     .topbar {
+      height: 64px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 16px;
-      background: #161b22;
-      border-bottom: 1px solid #30363d;
+      padding: 0 24px;
+      background: var(--bar-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
     }
 
-    .topbar h1 {
-      font-size: 16px;
-      margin: 0;
-      font-weight: 500;
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.95rem;
     }
-
-    .actions a {
-      text-decoration: none;
-      background: #238636;
-      color: #fff;
-      padding: 8px 14px;
+    .badge {
+      background: rgba(0, 245, 255, 0.1);
+      color: var(--cyan);
+      border: 1px solid var(--border);
+      padding: 3px 8px;
       border-radius: 6px;
-      font-size: 14px;
-      font-weight: 500;
+      font-size: 0.75rem;
     }
 
-    .actions a:hover {
-      background: #2ea043;
+    .actions {
+      display: flex;
+      gap: 12px;
     }
 
-    iframe {
-      width: 100%;
-      height: calc(100vh - 52px);
+    .btn {
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 8px;
+      transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+    .btn-back {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .btn-back:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: var(--cyan);
+    }
+    .btn-download {
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      color: #050811;
       border: none;
+      box-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
+    }
+    .btn-download:hover {
+      box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
+      transform: translateY(-1px);
+    }
+
+    .viewer-frame {
+      flex: 1;
+      width: 100%;
+      border: none;
+      background: #080c18;
     }
   </style>
 </head>
 <body>
 
-  <div class="topbar">
-    <h1>📄 Kaushal Karn — Resume</h1>
+  <header class="topbar">
+    <div class="meta">
+      <span>📄 Kaushal_Karn_CV.pdf</span>
+      <span class="badge">VERIFIED // 2026</span>
+    </div>
     <div class="actions">
-      <a href="assets/Kaushal_Karn_cv.pdf" download>
+      <a href="index.html" class="btn btn-back">← Back to Portfolio</a>
+      <!-- Exact case match for assets/kaushal_Karn_cv.pdf -->
+      <a href="assets/kaushal_Karn_cv.pdf" download="Kaushal_Karn_CV.pdf" class="btn btn-download">
         ⬇ Download PDF
       </a>
     </div>
-  </div>
+  </header>
 
-  <iframe src="assets/Kaushal_Karn_cv.pdf"></iframe>
+  <iframe 
+    class="viewer-frame" 
+    src="assets/kaushal_Karn_cv.pdf#toolbar=1&navpanes=0&scrollbar=1" 
+    title="Kaushal Karn Curriculum Vitae">
+  </iframe>
 
 </body>
 </html>

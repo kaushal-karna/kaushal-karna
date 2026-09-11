@@ -3,106 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kaushal Karn — Django / Python Backend Developer and BSc.CSIT student.">
-  <title>Kaushal Karn | Django / Python Backend Developer</title>
+  <meta name="description" content="Kaushal Karn — Futuristic Portfolio of a Django/Python Backend Developer & BSc.CSIT Student.">
+  <title>Kaushal Karn // Cyber-Core Portfolio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@300;500;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --bg: #0b1020;
-      --card: rgba(17, 25, 45, 0.78);
-      --text: #eef4ff;
-      --muted: #aab7cf;
-      --accent: #4f8cff;
-      --accent2: #7c5cff;
-      --border: rgba(255,255,255,.10);
+      --bg: #050811;
+      --card-bg: rgba(13, 20, 38, 0.58);
+      --card-border: rgba(0, 245, 255, 0.16);
+      --card-hover-border: rgba(139, 92, 246, 0.55);
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --cyan: #00f5ff;
+      --purple: #8b5cf6;
+      --pink: #ec4899;
     }
-    * { box-sizing: border-box; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
+
     body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #17234a 0, var(--bg) 45%);
+      background-color: var(--bg);
       color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
       line-height: 1.6;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
     }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, 92%); margin: auto; }
+
+    /* Ambient Futuristic Neon Orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(130px);
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.45;
+      animation: floatOrb 20s ease-in-out infinite alternate;
+    }
+    .orb-1 { width: 450px; height: 450px; background: radial-gradient(circle, var(--cyan), transparent 70%); top: -120px; left: -120px; }
+    .orb-2 { width: 520px; height: 520px; background: radial-gradient(circle, var(--purple), transparent 70%); bottom: 5%; right: -150px; animation-duration: 25s; }
+    .orb-3 { width: 320px; height: 320px; background: radial-gradient(circle, var(--pink), transparent 70%); top: 45%; left: 35%; opacity: 0.22; }
+
+    @keyframes floatOrb {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(55px) scale(1.12); }
+    }
+
+    /* Cyber grid lines */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container { width: min(1180px, 92%); margin: auto; }
+
+    /* Navigation */
     nav {
-      position: sticky; top: 0; z-index: 20;
-      backdrop-filter: blur(14px);
-      background: rgba(11,16,32,.78);
-      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(5, 8, 17, 0.75);
+      border-bottom: 1px solid var(--card-border);
     }
     nav .inner {
-      min-height: 64px; display: flex; align-items: center;
-      justify-content: space-between; gap: 20px;
+      height: 72px; display: flex; align-items: center; justify-content: space-between;
     }
-    .brand { font-weight: 800; letter-spacing: .2px; }
-    .links { display: flex; flex-wrap: wrap; gap: 18px; color: var(--muted); }
-    .links a:hover { color: white; }
-    .hero { padding: 82px 0 55px; }
-    .hero-grid {
-      display: grid; grid-template-columns: 1.3fr .7fr;
-      align-items: center; gap: 45px;
+    .brand {
+      font-weight: 800; font-size: 1.25rem; letter-spacing: -0.5px;
+      display: flex; align-items: center; gap: 8px; text-decoration: none; color: white;
     }
-    .eyebrow { color: #9bb8ff; font-weight: 700; }
-    h1 { font-size: clamp(2.5rem, 7vw, 5.3rem); line-height: .98; margin: 12px 0 20px; }
-    h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); margin-bottom: 10px; }
-    .gradient {
-      background: linear-gradient(90deg, #fff, #9bb8ff, #c0a8ff);
-      -webkit-background-clip: text; background-clip: text; color: transparent;
+    .brand-glow {
+      color: var(--cyan);
+      text-shadow: 0 0 14px rgba(0, 245, 255, 0.7);
+      font-family: 'Fira Code', monospace;
     }
-    .lead { color: var(--muted); font-size: 1.1rem; max-width: 700px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .nav-links { display: flex; gap: 24px; align-items: center; }
+    .nav-links a {
+      color: var(--muted); font-size: 0.92rem; font-weight: 500;
+      text-decoration: none; transition: 0.3s;
+    }
+    .nav-links a:hover { color: var(--cyan); text-shadow: 0 0 8px rgba(0, 245, 255, 0.5); }
+
+    /* Buttons */
     .btn {
-      padding: 12px 18px; border-radius: 12px;
-      border: 1px solid var(--border); background: rgba(255,255,255,.06);
-      font-weight: 700;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 24px; border-radius: 12px;
+      font-weight: 700; font-size: 0.92rem; text-decoration: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer; position: relative;
     }
-    .btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); border: 0; }
-    .avatar {
-      width: min(310px, 80vw); aspect-ratio: 1; margin: auto;
-      border-radius: 50%; padding: 7px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 25px 70px rgba(0,0,0,.35);
+    .btn-primary {
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      color: #050811;
+      box-shadow: 0 0 25px rgba(0, 245, 255, 0.35);
+      border: none;
     }
-    .avatar img { width: 100%; height: 100%; border-radius: 50%; display: block; background: #111827; }
-    section { padding: 62px 0; }
-    .section-head { margin-bottom: 24px; }
-    .section-head p, .muted { color: var(--muted); }
-    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .card {
-      background: var(--card); border: 1px solid var(--border);
-      border-radius: 18px; padding: 24px;
-      box-shadow: 0 12px 45px rgba(0,0,0,.15);
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 35px rgba(0, 245, 255, 0.6);
     }
-    .card h3 { margin-top: 0; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .btn-glass {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--card-border);
+      color: var(--text);
+      backdrop-filter: blur(10px);
+    }
+    .btn-glass:hover {
+      border-color: var(--cyan);
+      color: var(--cyan);
+      background: rgba(0, 245, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    /* Hero Section */
+    .hero { padding: 90px 0 70px; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.25fr 0.75fr;
+      align-items: center; gap: 48px;
+    }
+    .status-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px;
+      background: rgba(0, 245, 255, 0.08);
+      border: 1px solid rgba(0, 245, 255, 0.3);
+      font-size: 0.8rem; font-family: 'Fira Code', monospace;
+      color: var(--cyan); margin-bottom: 20px;
+    }
+    .status-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--cyan); box-shadow: 0 0 10px var(--cyan);
+      animation: pulseDot 2s infinite;
+    }
+    @keyframes pulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.85); } }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      line-height: 1.05; font-weight: 800; letter-spacing: -1.5px;
+      margin-bottom: 20px;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 20%, var(--cyan) 70%, var(--purple) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .lead { color: var(--muted); font-size: 1.15rem; max-width: 620px; margin-bottom: 32px; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    /* Avatar */
+    .avatar-wrapper {
+      position: relative; display: flex; justify-content: center; align-items: center;
+    }
+    .avatar-box {
+      width: min(320px, 80vw); aspect-ratio: 1; border-radius: 30px;
+      padding: 10px; position: relative;
+      background: linear-gradient(135deg, rgba(0, 245, 255, 0.5), rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.5));
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+    }
+    .avatar-box img {
+      width: 100%; height: 100%; object-fit: cover;
+      border-radius: 24px; background: #0c1222;
+      display: block;
+    }
+
+    /* Sections */
+    section { padding: 80px 0; }
+    .section-title-wrap { margin-bottom: 36px; }
+    .section-tag {
+      font-family: 'Fira Code', monospace; color: var(--cyan);
+      font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;
+    }
+    h2 { font-size: 2.2rem; font-weight: 800; letter-spacing: -0.5px; margin-top: 4px; }
+
+    /* Glass Cards Grid */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 28px;
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative; overflow: hidden;
+    }
+    .glass-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    }
+    .glass-card:hover {
+      border-color: var(--card-hover-border);
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 20px rgba(139, 92, 246, 0.2);
+    }
+
+    .card-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 12px; }
+    .card-desc { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; min-height: 52px; }
+
+    /* Tags */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
     .tag {
-      padding: 6px 10px; border-radius: 999px;
-      background: rgba(79,140,255,.12); color: #b9ceff;
-      border: 1px solid rgba(79,140,255,.18); font-size: .86rem;
+      font-family: 'Fira Code', monospace; font-size: 0.78rem;
+      padding: 4px 10px; border-radius: 8px;
+      background: rgba(0, 245, 255, 0.06);
+      border: 1px solid rgba(0, 245, 255, 0.2);
+      color: #b9e9ff;
     }
-    .analytics { display: grid; gap: 18px; }
-    .analytics img { width: 100%; max-width: 900px; display: block; margin: auto; border-radius: 12px; }
-    .resume-box { text-align: center; }
-    footer { border-top: 1px solid var(--border); padding: 28px 0; color: var(--muted); text-align: center; }
-    @media (max-width: 820px) {
-      .hero-grid, .grid { grid-template-columns: 1fr; }
-      nav .inner { align-items: flex-start; padding: 12px 0; flex-direction: column; }
-      .hero { padding-top: 55px; }
+
+    /* Analytics Container */
+    .graph-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      padding: 24px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .graph-card img {
+      width: 100%; height: auto; display: block; border-radius: 12px;
+    }
+
+    /* Fallback box if external chart fails */
+    .graph-fallback {
+      display: none;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 12px;
+      font-family: 'Fira Code', monospace;
+      color: var(--cyan);
+    }
+
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding: 35px 0; color: var(--muted);
+      font-size: 0.9rem; text-align: center;
+      backdrop-filter: blur(10px);
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+      .hero { padding-top: 40px; }
+      nav .inner { flex-direction: column; height: auto; padding: 16px 0; gap: 12px; }
     }
   </style>
 </head>
 <body>
+
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
   <nav>
     <div class="container inner">
-      <a class="brand" href="#">Kaushal Karn</a>
-      <div class="links">
+      <a class="brand" href="#">
+        <span class="brand-glow">&lt;KK /&gt;</span> Kaushal Karn
+      </a>
+      <div class="nav-links">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#analytics">GitHub</a>
-        <a href="resume.html">Resume</a>
+        <a href="#telemetry">Analytics</a>
+        <a href="resume.html" class="btn btn-glass" style="padding: 6px 16px;">Resume</a>
       </div>
     </div>
   </nav>
@@ -110,129 +286,167 @@
   <header class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="eyebrow">Django / Python Backend Developer • BSc.CSIT Student</div>
-        <h1>Hi 👋, I'm <span class="gradient">Kaushal Karn</span></h1>
+        <div class="status-badge">
+          <span class="status-dot"></span> AVAILABLE FOR BACKEND OPPORTUNITIES
+        </div>
+        <h1>Architecting <br><span class="gradient-text">Next-Gen Backends.</span></h1>
         <p class="lead">
-          I build database-driven web applications and REST APIs with Python and Django.
-          I'm also expanding my skills in ASP.NET Core, C#, Docker, Kubernetes and modern backend development.
+          I'm Kaushal Karn — a BSc.CSIT student and Backend Developer specializing in Python, Django, and high-performance REST APIs. Currently expanding into ASP.NET Core, C#, Docker, and cloud-native systems.
         </p>
-        <div class="actions">
-          <a class="btn primary" href="resume.html">View Resume</a>
-          <a class="btn" href="https://github.com/kaushal-karna" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="mailto:kkarn02977@gmail.com">Contact Me</a>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="resume.html">⚡ View Live Resume</a>
+          <a class="btn btn-glass" href="https://github.com/kaushal-karna" target="_blank" rel="noopener">GitHub Profile</a>
+          <a class="btn btn-glass" href="mailto:kkarn02977@gmail.com">Contact Terminal</a>
         </div>
       </div>
-      <div class="avatar">
-        <img src="data/avatar.png" alt="Kaushal Karn profile illustration">
+      <div class="avatar-wrapper">
+        <div class="avatar-box">
+          <img src="data/avatar.png" alt="Kaushal Karn profile" onerror="this.src='https://avatars.githubusercontent.com/kaushal-karna'">
+        </div>
       </div>
     </div>
   </header>
 
   <main>
+    <!-- About Section -->
     <section id="about">
       <div class="container">
-        <div class="section-head">
-          <h2>About Me</h2>
-          <p>BSc.CSIT student focused on Python, Django and backend development.</p>
+        <div class="section-title-wrap">
+          <div class="section-tag">// IDENTITY</div>
+          <h2>System Profile</h2>
         </div>
-        <div class="card">
-          <p>
-            I have hands-on experience with Django project setup, apps, models, ORM, URL routing,
-            views, templates, authentication, static/media handling and Django REST Framework.
-            I also work with MySQL, SQLite, Oracle DB, Git/GitHub and frontend technologies.
+        <div class="glass-card">
+          <p style="color: var(--muted); font-size: 1.05rem; line-height: 1.8;">
+            Specializing in building robust backend services with clean architecture. Strong working knowledge of Django ORM, authentication lifecycles (JWT, session-based), and relational database schema design (MySQL, SQLite, Oracle DB). Actively expanding capabilities in ASP.NET Core, C#, distributed data pipelines, and algorithmic efficiency.
           </p>
-          <div class="tags">
-            <span class="tag">Python</span><span class="tag">Django</span>
-            <span class="tag">Django REST Framework</span><span class="tag">REST APIs</span>
-            <span class="tag">JWT</span><span class="tag">MySQL</span><span class="tag">Git</span>
+          <div class="tags" style="margin-top: 20px;">
+            <span class="tag">Python 3.12</span>
+            <span class="tag">Django</span>
+            <span class="tag">Django REST Framework</span>
+            <span class="tag">JWT Engine</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Biratnagar, Nepal</span>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Projects Grid -->
     <section id="projects">
       <div class="container">
-        <div class="section-head">
-          <h2>Featured Projects</h2>
-          <p>Selected projects and learning work.</p>
+        <div class="section-title-wrap">
+          <div class="section-tag">// REPOSITORIES</div>
+          <h2>Featured Deployments</h2>
         </div>
-        <div class="grid">
-          <article class="card">
-            <h3>🎵 Advance Spotify</h3>
-            <p class="muted">A Spotify-inspired responsive music-streaming interface with interactive UI.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+        <div class="grid-3">
+          <article class="glass-card">
+            <h3 class="card-title">🎵 Advance Spotify</h3>
+            <p class="card-desc">Interactive responsive audio streaming application with real-time UI state sync and customized player controls.</p>
+            <div class="tags">
+              <span class="tag">JavaScript</span><span class="tag">CSS3</span><span class="tag">WebAudio</span>
+            </div>
           </article>
-          <article class="card">
-            <h3>💬 PalShare</h3>
-            <p class="muted">Django messaging platform work focused on conversations and sharing images, videos, documents and links.</p>
-            <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">DRF</span></div>
+
+          <article class="glass-card">
+            <h3 class="card-title">💬 PalShare</h3>
+            <p class="card-desc">High-throughput messaging backend with secure file, picture, and encrypted media relay systems.</p>
+            <div class="tags">
+              <span class="tag">Django</span><span class="tag">REST API</span><span class="tag">Channels</span>
+            </div>
           </article>
-          <article class="card">
-            <h3>🛒 Django E-commerce</h3>
-            <p class="muted">Modular e-commerce backend with category, accounts, store, cart and order functionality.</p>
-            <div class="tags"><span class="tag">Django</span><span class="tag">ORM</span><span class="tag">SQLite</span></div>
+
+          <article class="glass-card">
+            <h3 class="card-title">🛒 Django Commerce</h3>
+            <p class="card-desc">Production-ready e-commerce core with cart session preservation, inventory management, and checkout pipelines.</p>
+            <div class="tags">
+              <span class="tag">Django ORM</span><span class="tag">SQLite</span><span class="tag">Sessions</span>
+            </div>
           </article>
-          <article class="card">
-            <h3>🧑‍💻 Face Attendance System</h3>
-            <p class="muted">A computer-vision based attendance project focused on automating attendance workflows.</p>
+
+          <article class="glass-card">
+            <h3 class="card-title">🤖 Face Attendance</h3>
+            <p class="card-desc">Automated attendance verification system leveraging OpenCV to track and record identifications securely.</p>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">OpenCV</span><span class="tag">NumPy</span>
+            </div>
           </article>
-          <article class="card">
-            <h3>🌐 College Website</h3>
-            <p class="muted">Responsive college website integrated with WordPress as a CMS backend.</p>
-            <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">WordPress</span></div>
+
+          <article class="glass-card">
+            <h3 class="card-title">🌐 College Portal</h3>
+            <p class="card-desc">Responsive institutional hub engineered for dynamic announcements, syllabus data, and CMS controls.</p>
+            <div class="tags">
+              <span class="tag">HTML/JS</span><span class="tag">WordPress</span><span class="tag">CMS API</span>
+            </div>
           </article>
-          <article class="card">
-            <h3>📚 C# Learning Repository</h3>
-            <p class="muted">A learning repository for practising C# concepts and building a foundation for .NET development.</p>
-            <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span></div>
+
+          <article class="glass-card">
+            <h3 class="card-title">📚 C# & .NET Core Lab</h3>
+            <p class="card-desc">Modular repository implementing clean architecture, object lifecycles, and ASP.NET Core services.</p>
+            <div class="tags">
+              <span class="tag">C#</span><span class="tag">ASP.NET Core</span><span class="tag">EF Core</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
       <div class="container">
-        <div class="section-head">
-          <h2>Skills & Learning</h2>
-          <p>Technologies I'm using and currently improving.</p>
+        <div class="section-title-wrap">
+          <div class="section-tag">// ARSENAL</div>
+          <h2>Technical Architecture</h2>
         </div>
-        <div class="grid">
-          <div class="card"><h3>Backend</h3><p class="muted">Python, Django, Django REST Framework, REST APIs, Django ORM, JWT authentication.</p></div>
-          <div class="card"><h3>Databases</h3><p class="muted">MySQL, SQLite and Oracle DB.</p></div>
-          <div class="card"><h3>Frontend & Tools</h3><p class="muted">HTML5, CSS3, JavaScript, Git, GitHub, VS Code, Python venv, pip and WordPress.</p></div>
-          <div class="card"><h3>Currently Learning</h3><p class="muted">ASP.NET Core, C#, DSA, Computer Networks, Operating Systems, Docker and Kubernetes.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="analytics">
-      <div class="container">
-        <div class="section-head">
-          <h2>GitHub Analytics</h2>
-          <p>Live cards generated from my GitHub profile.</p>
-        </div>
-        <div class="analytics">
-          <div class="card">
-            <img src="https://kaushal-github-stats.vercel.app/api?username=kaushal-karna&show_icons=true&theme=transparent&hide_border=true&rank_icon=github&include_all_commits=true" alt="GitHub statistics">
+        <div class="grid-2">
+          <div class="glass-card">
+            <h3 class="card-title" style="color: var(--cyan);">Server-Side Systems</h3>
+            <p class="card-desc">Python, Django, Django REST Framework, ASP.NET Core, C#, JWT Authentication, MVC, Middleware architecture.</p>
           </div>
-          <div class="card">
-            <img src="https://kaushal-github-stats.vercel.app/api/top-langs/?username=kaushal-karna&layout=compact&theme=transparent&hide_border=true" alt="Top programming languages">
+          <div class="glass-card">
+            <h3 class="card-title" style="color: var(--purple);">Data Persistence</h3>
+            <p class="card-desc">MySQL, SQLite, Oracle DB, Schema Design, ORM Query Optimization, Transaction Management.</p>
           </div>
-          <div class="card">
-            <img src="https://github-readme-activity-graph.vercel.app/graph?username=kaushal-karna&theme=github-compact&hide_border=true" alt="GitHub activity graph">
+          <div class="glass-card">
+            <h3 class="card-title" style="color: var(--pink);">DevOps & Runtime</h3>
+            <p class="card-desc">Git, GitHub Actions, Docker, Linux, Virtualenv, Pipenv, REST Client testing, Microservices basics.</p>
+          </div>
+          <div class="glass-card">
+            <h3 class="card-title" style="color: #38bdf8;">Computer Science Core</h3>
+            <p class="card-desc">Data Structures & Algorithms, Operating Systems, Computer Networks, Protocol Engineering (TCP/HTTP).</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section>
+    <!-- Live Telemetry / GitHub Section -->
+    <section id="telemetry">
       <div class="container">
-        <div class="card resume-box">
-          <h2>📄 Resume</h2>
-          <p class="muted">View the latest PDF resume or download it for later.</p>
-          <div class="actions" style="justify-content:center">
-            <a class="btn primary" href="resume.html">Open Resume</a>
-            <a class="btn" href="assets/Kaushal_Karn_CV.pdf" download>Download PDF</a>
+        <div class="section-title-wrap">
+          <div class="section-tag">// TELEMETRY</div>
+          <h2>Live GitHub Analytics</h2>
+        </div>
+
+        <!-- Activity Graph with Auto-Failover -->
+        <div class="graph-card">
+          <img 
+            id="activity-graph-img"
+            src="https://github-readme-activity-graph.vercel.app/graph?username=kaushal-karna&theme=react-dark&bg_color=0d1426&color=00F5FF&line=8b5cf6&point=00F5FF&area=true&hide_border=true" 
+            alt="Kaushal Karn GitHub Activity Graph"
+            onerror="handleGraphError(this)"
+          >
+          <div id="activity-fallback" class="graph-fallback">
+            <p>⚡ GitHub Activity Stream is syncing via GitHub Actions.</p>
+            <a href="https://github.com/kaushal-karna" target="_blank" class="btn btn-glass" style="margin-top: 15px;">View directly on GitHub</a>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="graph-card">
+            <img src="https://kaushal-github-stats.vercel.app/api?username=kaushal-karna&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true" alt="Kaushal Karn GitHub Statistics">
+          </div>
+          <div class="graph-card">
+            <img src="https://kaushal-github-stats.vercel.app/api/top-langs/?username=kaushal-karna&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages">
           </div>
         </div>
       </div>
@@ -241,9 +455,14 @@
 
   <footer>
     <div class="container">
-      © 2026 Kaushal Karn • Biratnagar, Nepal •
-      <a href="mailto:kkarn02977@gmail.com">kkarn02977@gmail.com</a>
+      <p>© 2026 Kaushal Karn — Biratnagar, Nepal • Built with Cyber-Glass Aesthetic</p>
+      <p style="font-size: 0.8rem; margin-top: 6px;">
+        <a href="resume.html" style="color: var(--cyan); text-decoration: none;">View Resume</a> •
+        <a href="assets/kaushal_Karn_cv.pdf" download style="color: var(--cyan); text-decoration: none;">Download PDF</a>
+      </p>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
