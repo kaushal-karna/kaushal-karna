@@ -1,5 +1,28 @@
 <div align="center">
 
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,42&height=220&section=header&text=Kaushal%20Karn&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Django%20%2F%20Python%20Backend%20Architect%20•%20BSc.CSIT&descAlignY=58&descAlign=50" width="100%" alt="Header Banner" />
+
+  <p align="center">
+    <a href="https://kaushal-karna.github.io/portfolio-2026/">
+      <img src="https://img.shields.io/badge/LIVE_PORTFOLIO-00F5FF?style=for-the-badge&logo=safari&logoColor=060913" alt="Portfolio">
+    </a>
+    <a href="https://github.com/kaushal-karna">
+      <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+    </a>
+    <a href="mailto:kkarn02977@gmail.com">
+      <img src="https://img.shields.io/badge/EMAIL-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
+    </a>
+    <a href="https://www.youtube.com/@kaushalkarnakayansh839">
+      <img src="https://img.shields.io/badge/YOUTUBE-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube">
+    </a>
+  </p>
+
+  <p align="center">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3200&pause=1000&color=00F5FF&center=true&vCenter=true&width=720&lines=Python+%26+Django+Backend+Developer;Designing+Resilient+RESTful+APIs;Exploring+ASP.NET+Core+%26+Cloud+Native;Optimizing+Relational+Databases+%26+SQL" alt="Typing Banner" />
+  </p>
+
+</div>
+
 ---
 
 ### ⚡ Operational Matrix
@@ -21,23 +44,39 @@ Target Focus   : High-throughput API Design, Microservices, Security & Systems
 
 ### 🚀 Production & Learning Deployments
 
-| Repository                  | Focus & Architecture                                                   | Stack                   |
-| --------------------------- | ---------------------------------------------------------------------- | ----------------------- |
-| 🎵**Advance Spotify** | High-fidelity music streaming client with reactive audio workflows     | JavaScript CSS3 HTML5   |
-| 💬**PalShare**        | Scalable real-time Django communication system with asset distribution | Django REST APIs SQLite |
-| 🛒**Django Commerce** | Modular enterprise backend: cart lifecycle, auth, and order pipelines  | Python Django ORM MySQL |
-| 🤖**Face Attendance** | Computer-vision automated student identification & logging             | Python OpenCV NumPy     |
-| 📚**C# .NET Lab**     | Deep dive into OOP patterns, async/await pipelines, and ASP.NET Core   | C# .NET 8 ASP.NET       |
+| Repository             | Focus & Architecture                                                   | Stack                   |
+| ---------------------- | ---------------------------------------------------------------------- | ----------------------- |
+| 🎵 **Advance Spotify** | High-fidelity music streaming client with reactive audio workflows     | JavaScript CSS3 HTML5   |
+| 💬 **PalShare**        | Scalable real-time Django communication system with asset distribution | Django REST APIs SQLite |
+| 🛒 **Django Commerce** | Modular enterprise backend: cart lifecycle, auth, and order pipelines  | Python Django ORM MySQL |
+| 🤖 **Face Attendance** | Computer-vision automated student identification & logging             | Python OpenCV NumPy     |
+| 📚 **C# .NET Lab**     | Deep dive into OOP patterns, async/await pipelines, and ASP.NET Core   | C# .NET 8 ASP.NET       |
 
 ### 📈 Activity Graph & Telemetry
 
 <div align="center">
 
+  <a href="https://github.com/kaushal-karna">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=kaushal-karna&theme=react-dark&bg_color=060913&color=00F5FF&line=8b5cf6&point=00F5FF&area=true&hide_border=true" width="100%" alt="Kaushal's Activity Graph" />
+  </a>
+
+</div>
+
 <br/>
 
 <div align="center">
 
+  <img src="https://kaushal-github-stats.vercel.app/api?username=kaushal-karna&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true" width="49%" alt="GitHub Stats" />
+
+  <img src="https://kaushal-github-stats.vercel.app/api/top-langs/?username=kaushal-karna&layout=compact&theme=tokyonight&hide_border=true" width="45%" alt="Top Languages" />
+
+</div>
+
 <div align="center">
+
+  <img src="https://streak-stats.demolab.com?user=kaushal-karna&theme=tokyonight&hide_border=true" width="95%" alt="GitHub Streak" />
+
+</div>
 
 ### 🐍 Contribution Grid Stream
 
@@ -58,3 +97,12 @@ Target Focus   : High-throughput API Design, Microservices, Security & Systems
 </picture>
 
 <div align="center">
+
+  <img src="https://komarev.com/ghpvc/?username=kaushal-karna&style=for-the-badge&color=00F5FF" alt="Profile Views" />
+
+  <br/>
+  <br/>
+
+<sub><i>"The best way to predict the future is to architect it."</i></sub>
+
+</div>
