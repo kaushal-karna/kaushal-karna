@@ -3,11 +3,13 @@
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,12,24,42&height=220&section=header&text=Kaushal%20Karn&fontSize=60&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Django%20%2F%20Python%20Backend%20Architect%20•%20BSc.CSIT&descAlignY=58&descAlign=50" width="100%" alt="Header Banner" />
 
   <p align="center">
-    <a href="https://kaushal-karn.onrender.com/">
-      <img src="https://img.shields.io/badge/LIVE_PORTFOLIO-00F5FF?style=for-the-badge&logo=safari&logoColor=060913" alt="Portfolio">
-    </a>
-     <a href="https://github.com/kaushal-karna/kaushal-karna/blob/main/resume.html">
-    <img src="https://img.shields.io/badge/RESUME-00F5FF?style=for-the-badge&logo=readme&logoColor=060913" alt="Resume">
+   <a href="https://kaushal-karna.github.io/portfolio-2026/">
+  <img src="https://img.shields.io/badge/LIVE_PORTFOLIO-00F5FF?style=for-the-badge&logo=safari&logoColor=060913" alt="Portfolio">
+</a>
+
+<a href="https://kaushal-karna.github.io/portfolio-2026/resume.html">
+  <img src="https://img.shields.io/badge/LIVE_RESUME-8B5CF6?style=for-the-badge&logo=readme&logoColor=white" alt="Live Resume">
+</a>
   </a>
     <a href="https://github.com/kaushal-karna">
       <img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
